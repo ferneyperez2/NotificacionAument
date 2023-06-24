@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<div id="user"></div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+
+  </div>
+
+  <script>
+    const userDiv= document.getElementById('user')
+    console.log(userDiv)
+    let user_name=[{
+      
+       nombre:'Mark Webber',
+       rutina:'reacted to your recent post My first tournament today!1m ago',
+       active: false
+     },
+     {
+      nombre:' Angela',
+      rutina:'Gray followed you5m ago',
+      active:false
+     },
+     {
+      nombre:'Jacob Thompson ',
+      rutina:' has joined your group Chess Club1 day ago',
+      active:false
+     },
+
+     {
+      nombre:'Rizky Hasanuddin',
+      rutina:'ent you a private message5 days agoHello, thanks for setting up the Chess Club. Ive been a member for a few weeks now and Im already having lots of fun and improving my game.',
+      active: false
+     }
+    ];
+
+   
+     user_name.forEach(recorer => {
+    });
+
+    for (let i = 0; i < user_name.length; i++) {
+      if ( user_name[i].active ===  false) {
+    
+      console.log( user_name[i].active)
+
+      }
+    
+      
+     
+    }
+
+     for (let i = 0; i < user_name.length; i++) {
+  let nameUser= user_name[i].nombre;
+  let rutina= user_name[i].rutina;
+  // let = user_name[i].nombre;
+
+       re = document.getElementById('user')
+       let carHtml=` <div> 
+        <p> ${nameUser} </p>
+        <p> ${rutina} </p>     
+        
+        </div>`
+        userDiv.innerHTML+=carHtml
+     }
+
+
+  </script>
+</body>
+</html>
